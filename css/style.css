@@ -1,0 +1,117 @@
+*{
+    box-sizing: border-box;
+}
+header{
+    width:100% ;
+    /* height: 500px;     */
+    background-size: cover;
+	background-attachment: fixed;
+	position: relative;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(to right, rgba(9,9,121,.3), rgba(0,212,255,.3)),url(../images/e9bb8af36dfcbb7eb9d1249fc30c28a2.jpg);
+    border-radius:0 0 50% 50% / 50%;
+    background-position: bottom;
+    /* float: inline-end; */
+}
+.bgge{
+    border:1px solid linear-gradient(to right, rgba(9,9,121,.3), rgba(0,212,255,.3));
+}
+.bg-bgge{
+   background-image:  linear-gradient(to right, rgb(9,9,121), rgb(0,212,255));
+   border: 1px solid #0bb5e9;
+}
+.text-bgge{
+ color: linear-gradient( rgb(9,9,121), rgb(0,212,255));   
+}
+.How-To-Book h2{
+	background: linear-gradient(to right, rgb(9,9,121) 0%, rgb(0,212,255) 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+}
+.b-search{
+    background: linear-gradient(to right, rgb(9,9,121) 0%, rgb(0,212,255) 100%);
+	-webkit-background-clip: border-box;
+	/* -webkit-text-fill-color: transparent; */
+}
+
+
+/* -----resp----- */
+@media (max-width: 991px){
+    header h1{
+        font-size: 2rem !important;
+    }
+    header h3{
+        font-size: 1.25rem !important;
+        padding: 1.75rem !important;
+    }
+    .hero form{
+        display: flex;
+        flex-direction: column;
+        margin-left: 100px;
+        align-items: flex-start;
+        height: 280px;
+    };
+
+};
+@media (max-width:575px){
+.How-To-Book .col-md-7 .row{
+    margin: 0;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+
+}
+@media (max-width:767px){
+    .How-To-Book .col-md-7 .row{
+        margin-top: 40px !important;
+    }
+.col-md-9 h3,.col-md-9 p{
+    text-align: center;
+   
+}}
+
+
+
+
+/* ---------------------------- end of home ------------------------------------- */
+
+
+.rate {
+    /* width: 60%; */
+    display: block;
+    /* float: left; */
+    height: 40px;
+    /* padding: 0 10px; */
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #007bff;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #007bff;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #007bff;
+}
